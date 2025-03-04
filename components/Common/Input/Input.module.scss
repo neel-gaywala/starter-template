@@ -1,0 +1,143 @@
+@use "../../../styles/utils/helpers" as *;
+
+$height: 56;
+$mdHeight: 40;
+$smHeight: 30;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  visibility: visible;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  background: none;
+  border-bottom: 1px solid;
+  color: $white;
+  border-color: rgba($white, 0.4);
+  font-weight: 400;
+  visibility: visible;
+  transition: all 0.2s;
+  padding-left: 8px;
+  background-color: rgba($white, 0.1);
+
+  &.sm {
+    height: $smHeight + px;
+    font-size: 12px;
+  }
+
+  &.md {
+    height: $mdHeight + px;
+    font-size: 13px;
+  }
+
+  &.lg {
+    height: $height + px;
+    font-size: 16px;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover {
+    border-color: rgba($white, 0.6);
+  }
+  &:focus {
+    border-bottom-width: 2px;
+    border-color: rgba($white, 0.8);
+  }
+  // &::placeholder {
+  //   color: $neutrals4;
+  // }
+  // &:disabled {
+  //   background-color: $neutrals7;
+  //   pointer-events: none;
+  // }
+
+  &.isError {
+    border-color: $red;
+    &:focus {
+      border-color: $red;
+    }
+  }
+
+  &.startIcon {
+    padding-left: calc($height - 4) + px;
+  }
+
+  &.endIcon {
+    padding-right: calc($height - 4) + px;
+  }
+
+  &.textarea {
+    padding: 8px;
+    height: auto;
+  }
+
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.inputIcon {
+  position: absolute;
+  &.sm {
+    top: calc($smHeight / 2) + px;
+  }
+
+  &.md {
+    top: calc($mdHeight / 2) + px;
+  }
+
+  &.lg {
+    top: calc($height / 2) + px;
+  }
+
+  transform: translate(0, -50%);
+  color: $white;
+
+  transition: all 0.2s;
+  &.startIcon {
+    left: calc($height / 3) + px;
+  }
+
+  &.endIcon {
+    right: calc($height / 3) + px;
+  }
+}
+
+.inputValueContainer {
+  display: flex;
+  align-items: center;
+  &.sm {
+    min-height: $smHeight + px;
+    font-size: 12px;
+  }
+
+  &.md {
+    min-height: $mdHeight + px;
+    font-size: 14px;
+  }
+
+  &.lg {
+    min-height: $height + px;
+    font-size: 16px;
+  }
+}

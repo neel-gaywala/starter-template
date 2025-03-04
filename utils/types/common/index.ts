@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type IconType =
   | "more"
   | "moreArrows"
@@ -109,3 +110,15 @@ export type InputIcon = {
   onClick?: () => void;
   size?: IconSize;
 };
+
+export interface SelectOptions {
+  fontSize?: number;
+  fontWeight?: string;
+  color?: string;
+}
+
+export interface FilterOptions {
+  label: string;
+  value: any;
+  data: any;
+}

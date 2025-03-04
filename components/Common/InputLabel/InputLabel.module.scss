@@ -1,0 +1,34 @@
+@use "../../../styles/utils/helpers" as *;
+
+.inputLabel {
+  color: #fff;
+}
+.sm {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.md {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+  height: 21px;
+}
+
+.helperText {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.errorText {
+  font-size: 13px;
+  font-weight: 400;
+  color: $red;
+}
+
+.error {
+  color: $red;
+}

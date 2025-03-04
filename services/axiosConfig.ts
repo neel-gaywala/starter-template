@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import axios, {
   AxiosError,
   AxiosResponse,
@@ -26,7 +28,7 @@ const instance = axios.create({
 });
 
 const onRequest = (
-  config: InternalAxiosRequestConfig,
+  config: InternalAxiosRequestConfig
 ): InternalAxiosRequestConfig => {
   config.headers.set("Authorization", `Bearer ${getCookie("__session")}`);
   return config;

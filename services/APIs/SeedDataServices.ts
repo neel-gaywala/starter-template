@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axiosInstance, { ResponseHelper } from "@/services/axiosConfig";
 
 class SeedDataServices {

@@ -4,7 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   eslint: {
-    dirs: ["app", "components", "containers", "utils", "services", "hooks"],
+    dirs: [
+      "app",
+      "components",
+      "containers",
+      "utils",
+      "services",
+      "hooks",
+      "store",
+    ],
   },
 };
 

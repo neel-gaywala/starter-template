@@ -1,0 +1,28 @@
+$sizeArray: (12, 14, 16, 18, 20, 22, 24, 26);
+$thickArray: (2, 3, 4, 5, 6);
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: inline-block;
+  vertical-align: text-bottom;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  border-style: solid;
+  border-color: currentColor transparent currentColor currentColor;
+  @each $size in $sizeArray {
+    &.size-#{$size} {
+      width: #{$size} + px;
+      height: #{$size} + px;
+    }
+  }
+  @each $size in $thickArray {
+    &.thick-#{$size} {
+      border-width: #{$size} + px;
+    }
+  }
+}

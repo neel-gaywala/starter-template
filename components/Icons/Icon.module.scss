@@ -1,0 +1,40 @@
+$sizeArray: (
+  "xxs": "12",
+  "mxs": "14",
+  "xs": "16",
+  "sm": "17",
+  "md": "18",
+  "lg": "19",
+  "xl": "20",
+  "2xl": "21",
+  "3xl": "22",
+  "4xl": "24",
+  "5xl": "26",
+  "6xl": "28",
+  "7xl": "30",
+  "8xl": "40",
+  "9xl": "50",
+  "10xl": "60",
+  "160px": "160",
+);
+
+.icon {
+  @each $name, $size in $sizeArray {
+    &.size-#{$name} {
+      font-size: #{$size} + px;
+    }
+  }
+}
+
+.fillIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @each $name, $size in $sizeArray {
+    &.size-#{$name} {
+      $a: #{$size} + px;
+      width: calc($a + 18px);
+      height: calc($a + 18px);
+    }
+  }
+}
